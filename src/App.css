@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  background: linear-gradient(to top right, #00ffff 0%, #3366ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  min-height: 100vh;
+}
+
+.header-container .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-header{
+  width: 960px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+.main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.main-nav li {
+	display: inline;
+  margin-left: 25px;
+  font-size: x-large;
+  border-right: 1px solid white;
+}
+.main-nav li:hover{
+  color: rgb(70, 6, 248);
+  text-decoration: underline #00ffff;
+}
+.main-nav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+}
+
+h1>img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	background:rgba(231, 233, 235, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  width:400px;
+  display: flex;  
+  flex-direction: column;
+}
+
+.logo{
+  color: rgb(255, 255, 255);
+  font-size:25px;
+  text-align: center;
+  padding: 20px 20px 0;
+  margin:0;
+}
+.login-item {
+	color: #ffff;
+	padding:25px 25px 25px;
+	margin: 20px 20px 0;	
+	border-radius: 3px;
+}
+.form-field {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.forgot-field{
+  display: flex;
+  justify-content: center;
+  text-decoration: rgb(243, 243, 248);
+  font-weight: 100;
+  font-size: 12px;
+  margin: 10px;
+}
+.forgot-field:hover{
+  text-decoration: underline;
+}
+.form-submit-button{
+width: 225px;
+color:bisque;
+padding: 10px 30px;
+background: linear-gradient(to top right, #00ffff 0%, #3366ff 100%);
+border:none;
+border-radius: 5px;
+font-size: 15px;
+}
+
