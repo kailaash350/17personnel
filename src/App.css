@@ -54,6 +54,18 @@ h1>img {
   display: flex;  
   flex-direction: column;
 }
+.ul-image{
+  display: flex;
+}
+.home-image{
+  list-style: none;
+  flex: 33.33%;
+  padding: 3px;
+}
+.home-image >img{
+  width: 100px;
+  border-radius: 50px;
+}
 
 /*Login and register page*/
 .logo{
@@ -82,7 +94,7 @@ h1>img {
   font-size: 12px;
   margin: 10px;
 }
-.forgot-field:hover{
+.forgot-field :hover{
   text-decoration: underline;
 }
 .form-submit-button{
@@ -94,10 +106,15 @@ border:none;
 border-radius: 5px;
 font-size: 15px;
 }
+.form-submit-button:hover{
+  border: #fff;
+  background: linear-gradient(to top right, #00ffff8f 0%, #3366ffbb 100%);
+
+}
 
 /*Details page*/
 .details-container{
   display: flex;
-  width: 300px;
-  background: rgba(190, 190, 190, 0.507);
+  width: inherit;
+  background: rgba(253, 249, 249, 0.233);
 }
