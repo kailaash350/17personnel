@@ -3,8 +3,9 @@ import React, { useState} from 'react'
 import TextField from '@material-ui/core/TextField';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {BrowserRouter, Switch, Link, Route} from 'react-router-dom';
+import Auth from "./Auth";
 
-function LoginCard() {
+function LoginCard (props) {
 
     const [state, setState] = React.useState({
         Name: "",
@@ -18,8 +19,10 @@ function LoginCard() {
 };
 
 const mySubmitHandler = (e) => {
-    console.log(state.Name)
-    
+    e.preventDefault();
+    //if(Auth.login === true){
+        return ( props.history.push("/success"));
+    //}
   }
 
     return (
@@ -32,7 +35,6 @@ const mySubmitHandler = (e) => {
                             required
                             id="outlined-required"
                             label="User Name or Email"
-                            value={""}
                             value={state.name} onChange={handleChange}
                             variant="outlined"
                         />
@@ -48,7 +50,9 @@ const mySubmitHandler = (e) => {
                     </div>
                     <div className="forgot-field">Forgot Password ?</div>
                     <button className="form-submit-button" ><ExitToAppIcon/></button>
+                    <Link to = "/register">
                     <div className="forgot-field">Register</div>
+                    </Link>
                 </form>
             </div>
         </div>

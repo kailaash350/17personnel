@@ -1,4 +1,4 @@
-class Auth {
+class auth {
     constructor(){
         this.authenticated = false;
     }
@@ -17,4 +17,3 @@ class Auth {
     }
 }
 
-export default Auth;

@@ -8,11 +8,12 @@
   color: white;
   min-height: 100vh;
 }
-
+/*Header page*/
 .header-container .main-header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: -60px;
 }
 
 .main-header{
@@ -54,6 +55,7 @@ h1>img {
   flex-direction: column;
 }
 
+/*Login and register page*/
 .logo{
   color: rgb(255, 255, 255);
   font-size:25px;
@@ -93,3 +95,9 @@ border-radius: 5px;
 font-size: 15px;
 }
 
+/*Details page*/
+.details-container{
+  display: flex;
+  width: 300px;
+  background: rgba(190, 190, 190, 0.507);
+}
