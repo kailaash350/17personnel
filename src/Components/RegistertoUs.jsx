@@ -1,9 +1,8 @@
-import {BrowserRouter, Switch, Link, Route} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import axios from 'axios';
 import React, { useState} from 'react'
 import TextField from '@material-ui/core/TextField';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { StarRateTwoTone } from '@material-ui/icons';
 
 
 const RegistertoUs = props => {
