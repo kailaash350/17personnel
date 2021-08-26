@@ -1,16 +1,16 @@
 
-import React, { useState} from 'react'
+import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import {BrowserRouter, Switch, Link, Route} from 'react-router-dom';
-import Auth from "./Auth";
+import { Link} from 'react-router-dom';
+import axios from 'axios';
 
 function LoginCard (props) {
 
     const [state, setState] = React.useState({
-        Name: "",
-        Password: "",
-        hidden: true 
+        email: "",
+        password: "",
+        wait: false 
       });
     
 
@@ -18,25 +18,38 @@ function LoginCard (props) {
     setState({ ...state, [event.target.name]: event.target.value });
 };
 
-const mySubmitHandler = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
-    //if(Auth.login === true){
-        return ( props.history.push("/success"));
-    //}
+    console.log(state)
+    axios.get('http://localhost:9001/api/login', {
+        email:state.email,
+        password: state.password,
+      })
+      .then(function (response) {
+          console.log(response)
+        if(response.status === 200)
+        setState({email:"",password:"", wait:false})
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+        //return ( props.history.push("/success"));
+    
   }
 
     return (
         <div className="container">
             <div className="logo">Access 17 Foley Street</div>
             <div className="login-item">
-                <form className="form-login" onSubmit={mySubmitHandler}>
+                <form className="form-login" onSubmit={handleSubmit}>
                     <div className="form-field">
                         <TextField
                             required
                             id="outlined-required"
                             label="User Name or Email"
-                            value={state.name} onChange={handleChange}
-                            variant="outlined"
+                            value={state.email} onChange={handleChange}
+                            variant="outlined" name="email"
                         />
                     </div>
                     <div className="form-field">
@@ -44,7 +57,7 @@ const mySubmitHandler = (e) => {
                             required
                             id="outlined-required"
                             label="Password"
-                            variant="outlined" type="password"
+                            variant="outlined" type="password" name="password"
                             value={state.password} onChange={handleChange}
                         />
                     </div>
