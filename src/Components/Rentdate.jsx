@@ -1,19 +1,22 @@
-import React from 'react';
+import React  from 'react';
 
 
 const Rentdate = () => {
-    var date1 = new Date("09/14/2021");
-  var date2 = new Date("08/27/2021");
+    
+   
 
-  // To calculate the time difference of two dates
-  var Difference_In_Time = date1.getTime() - date2.getTime();
+    var date1 = new Date();
+    var rentdate = new Date('September 14, 2021 00:00:00');
+    if(date1.getTime() === rentdate.getTime()){
+        
+    }
+    
+    const dif = rentdate.getTime() - date1.getTime()
+    const day = Math.round(dif/ 24/60/60/1000);
+    const rentReminder = "You have "+ day +" days to pay the rent"
 
-  // To calculate the no. of days between two dates
-  var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
     return (
-        <div>
-            {Difference_In_Days}
-        </div>
+        <b>{rentReminder}</b>
     )
 }
 

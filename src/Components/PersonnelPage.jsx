@@ -21,8 +21,9 @@ const PersonnelPage = (props) => {
             <h1>Hyzaa Buddy {location.state.detail}  </h1>
         </div>
         <p>
-        <TextScroller text={"You have 18days to pay rent. Next rent is on September 14 2021"}/>
+        <TextScroller/>
         </p>
+        
          <Button onClick={handlelogout} variant="contained" color="primary">Leave Home</Button>
          </div>
     )
