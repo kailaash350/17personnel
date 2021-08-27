@@ -13,13 +13,13 @@ const RegistertoUs = props => {
      }, []);
     
 
-    const [state, setState] = React.useState({
+    const [state, setState] = useState({
         fullName: "",
         email:"",
         password: "",
         wait: false,
         result:"" 
-      });
+      },[]);
  
   
 
