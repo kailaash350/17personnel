@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
+import Rentdate from "./Rentdate";
 
 const TextScroller = ({ text }) => {
   const [key, setKey] = useState(1);
@@ -9,7 +10,6 @@ const TextScroller = ({ text }) => {
     to: { transform: "translate(-60%,0)" },
     config: { duration: 8000},
     reset: true,
-    //reverse: key % 2 == 0,
     onRest: () => {
       setKey(key + 1);
     }
@@ -17,7 +17,7 @@ const TextScroller = ({ text }) => {
 
   return (
     <div key={key}>
-      <animated.div style={scrolling}>{text}</animated.div>
+      <animated.div className="text-scroll" style={scrolling}>{text}<Rentdate/></animated.div>
     </div>
   );
 };

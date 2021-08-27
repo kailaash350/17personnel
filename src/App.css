@@ -118,3 +118,8 @@ font-size: 15px;
   width: inherit;
   background: rgba(253, 249, 249, 0.233);
 }
+.App .text-scroll{
+  color: rgb(233, 10, 10);
+  font-size: 14px;
+  font-weight: bold;
+}
