@@ -1,11 +1,17 @@
 import { Link} from 'react-router-dom';
 import axios from 'axios';
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import TextField from '@material-ui/core/TextField';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import {hostMachine} from './Appconstant'
 
 
 const RegistertoUs = props => {
+
+    useEffect(() => {
+        console.log(hostMachine); 
+     }, []);
+    
 
     const [state, setState] = React.useState({
         fullName: "",
@@ -23,7 +29,7 @@ const RegistertoUs = props => {
 const handleSubmit = (e) => {
     e.preventDefault();
     setState({wait:true})
-    axios.post('http://127.0.0.1:9001/api/register', {
+    axios.post(hostMachine+'/api/register', {
         fullname: state.fullName,
         email:state.email,
         password: state.password,
