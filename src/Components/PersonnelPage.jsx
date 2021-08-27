@@ -23,7 +23,6 @@ const PersonnelPage = (props) => {
         <p>
         <TextScroller/>
         </p>
-        
          <Button onClick={handlelogout} variant="contained" color="primary">Leave Home</Button>
          </div>
     )
