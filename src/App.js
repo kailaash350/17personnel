@@ -5,6 +5,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './Components/Home';
 import RegistertoUs from './Components/RegistertoUs';
 import PersonnelPage from './Components/PersonnelPage';
+import ForgotPassword from './Components/ForgotPassword';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/login" component={LoginCard}/>
       <Route path="/register" component={RegistertoUs}/>
       <Route path = "/Auth=true" exact component={PersonnelPage}/>
+      <Route path="/resetPwd=true" component={ForgotPassword}/>
 
       </Switch>
     </div>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Alert from '@material-ui/lab/Alert';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { hostMachine } from './Appconstant';
 
 function LoginCard(props) {
 
@@ -24,7 +25,7 @@ function LoginCard(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         setState({ wait:true })
-        axios.post('http://localhost:9001/api/login', {
+        axios.post(hostMachine+'/api/login', {
             email: state.email,
             password: state.password,
         })
@@ -76,7 +77,9 @@ function LoginCard(props) {
                             value={state.password} onChange={handleChange}
                         />
                     </div>
+                    <Link to="/resetPwd=true">
                     <div className="forgot-field">Forgot Password ?</div>
+                    </Link>
                     {(state.wait === false) ?
 
                         <button className="form-submit-button" ><HomeRoundedIcon /></button>

@@ -9,7 +9,6 @@ import {hostMachine} from './Appconstant'
 const RegistertoUs = props => {
 
     useEffect(() => {
-        console.log(hostMachine); 
      }, []);
     
 

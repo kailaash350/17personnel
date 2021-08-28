@@ -4,6 +4,7 @@ import vinodh from '../images/vinodh.jpg';
 import kailaash from '../images/kk.jpeg'
 import deepak from '../images/deepak.jpeg'
 import steve from '../images/steve.JPG';
+import Weather from './Weather';
 
 
 const Home = props => {
@@ -19,9 +20,8 @@ const Home = props => {
                 <li className="home-image"><img src={ram} alt="dp1.com" /></li>
                 <li className="home-image"><img src={deepak} alt="dp1.com" /></li>
                 <li className="home-image"><img src={steve} alt="dp1.com" /></li>
-
-
             </ul>
+            <div className="weather-container"><Weather/></div>
         </>
     );
 }
